@@ -1,0 +1,70 @@
+
+# ================================
+# GUÍA BÁSICA DE COMANDOS ANGULAR CLI
+# ================================
+
+# Verificar que Angular CLI esté instalado
+ng version
+
+# Crear una nueva aplicación Angular
+ng new nombre-app
+
+# Moverse al directorio del proyecto
+cd nombre-app
+
+# Ejecutar el servidor de desarrollo
+ng serve
+# También puedes usar:
+ng serve --open   # Abre el navegador automáticamente
+
+# Crear un nuevo componente
+ng generate component nombre-componente
+# o más corto:
+ng g c nombre-componente
+
+# Crear un nuevo servicio
+ng generate service nombre-servicio
+# o:
+ng g s nombre-servicio
+
+# Crear un nuevo módulo
+ng generate module nombre-modulo
+# o:
+ng g m nombre-modulo
+
+# Crear una directiva
+ng generate directive nombre-directiva
+# o:
+ng g d nombre-directiva
+
+# Crear un pipe
+ng generate pipe nombre-pipe
+# o:
+ng g p nombre-pipe
+
+# Crear un guard (para rutas)
+ng generate guard nombre-guard
+# o:
+ng g g nombre-guard
+
+# Construir la aplicación para producción
+ng build --configuration production
+# o más corto:
+ng build --prod
+
+# Ejecutar pruebas unitarias (Karma)
+ng test
+
+# Ejecutar pruebas end-to-end (Protractor)
+ng e2e
+
+# Analizar tamaño de los bundles
+ng build --stats-json
+# Luego:
+npx webpack-bundle-analyzer dist/nombre-app/stats-es2015.json
+
+# Listar todos los comandos disponibles
+ng help
+
+# Actualizar Angular CLI y dependencias del proyecto
+ng update

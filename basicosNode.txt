@@ -1,0 +1,59 @@
+# ========================================
+# GUÍA BÁSICA DE COMANDOS DE NODE.JS
+# ========================================
+
+# Ver versión de Node.js instalada
+node -v
+
+# Ver versión de npm (Node Package Manager)
+npm -v
+
+# Ejecutar un archivo JavaScript con Node
+node archivo.js
+
+# Iniciar un proyecto Node.js (crea package.json)
+npm init
+# o modo rápido sin preguntas:
+npm init -y
+
+# Instalar un paquete (librería)
+npm install nombre-paquete
+
+# Instalar un paquete de forma global (para usarlo desde consola)
+npm install -g nombre-paquete
+
+# Instalar todas las dependencias definidas en package.json
+npm install
+
+# Instalar un paquete como dependencia de desarrollo (ej: eslint, nodemon)
+npm install nombre-paquete --save-dev
+
+# Ver lista de paquetes instalados
+npm list
+# Globales:
+npm list -g --depth=0
+
+# Desinstalar un paquete
+npm uninstall nombre-paquete
+
+# Ejecutar scripts definidos en package.json
+npm run nombre-script
+
+# Crear un servidor básico (ejemplo con Express)
+npm install express
+# Archivo index.js:
+# const express = require('express');
+# const app = express();
+# app.get('/', (req, res) => res.send('Hola mundo'));
+# app.listen(3000, () => console.log('Servidor corriendo en puerto 3000'));
+
+# Ejecutar archivo:
+node index.js
+
+# Usar nodemon para recargar automáticamente en desarrollo
+npm install -g nodemon
+nodemon index.js
+
+# Salir del modo interactivo de Node
+# (cuando ejecutas solo "node" en consola)
+.exit

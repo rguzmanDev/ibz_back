@@ -1,0 +1,99 @@
+
+-- ========================================
+-- GUÍA BÁSICA DE COMANDOS SQL SERVER
+-- ========================================
+
+-- Crear una base de datos
+CREATE DATABASE nombre_basedatos;
+
+-- Usar una base de datos
+USE nombre_basedatos;
+
+-- Crear una tabla
+CREATE TABLE nombre_tabla (
+    id INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+    nombre VARCHAR(100),
+    fecha_creacion DATE
+);
+
+-- Modificar una tabla: agregar columna
+ALTER TABLE nombre_tabla ADD descripcion TEXT;
+
+-- Modificar una tabla: cambiar tipo de dato
+ALTER TABLE nombre_tabla ALTER COLUMN nombre NVARCHAR(200);
+
+-- Eliminar una columna
+ALTER TABLE nombre_tabla DROP COLUMN descripcion;
+
+-- Eliminar una tabla
+DROP TABLE nombre_tabla;
+
+-- Insertar registros
+INSERT INTO nombre_tabla (nombre, fecha_creacion)
+VALUES ('Ejemplo', '2025-01-01');
+
+-- Consultar todos los registros
+SELECT * FROM nombre_tabla;
+
+-- Consultar con condiciones
+SELECT * FROM nombre_tabla WHERE nombre = 'Ejemplo';
+
+-- Crear una vista
+CREATE VIEW vista_ejemplo AS
+SELECT nombre, fecha_creacion
+FROM nombre_tabla
+WHERE fecha_creacion >= '2025-01-01';
+
+-- Eliminar una vista
+DROP VIEW vista_ejemplo;
+
+-- Crear un procedimiento almacenado
+CREATE PROCEDURE sp_obtener_datos
+AS
+BEGIN
+    SELECT * FROM nombre_tabla;
+END;
+
+-- Ejecutar un procedimiento almacenado
+EXEC sp_obtener_datos;
+
+-- Eliminar un procedimiento almacenado
+DROP PROCEDURE sp_obtener_datos;
+
+-- INNER JOIN entre dos tablas
+SELECT a.id, a.nombre, b.otro_campo
+FROM tabla1 a
+INNER JOIN tabla2 b ON a.id = b.id_tabla1;
+
+-- LEFT JOIN
+SELECT a.id, a.nombre, b.otro_campo
+FROM tabla1 a
+LEFT JOIN tabla2 b ON a.id = b.id_tabla1;
+
+-- RIGHT JOIN
+SELECT a.id, a.nombre, b.otro_campo
+FROM tabla1 a
+RIGHT JOIN tabla2 b ON a.id = b.id_tabla1;
+
+-- FULL OUTER JOIN
+SELECT a.id, a.nombre, b.otro_campo
+FROM tabla1 a
+FULL OUTER JOIN tabla2 b ON a.id = b.id_tabla1;
+
+-- Contar registros
+SELECT COUNT(*) FROM nombre_tabla;
+
+-- Agrupar resultados
+SELECT nombre, COUNT(*) AS cantidad
+FROM nombre_tabla
+GROUP BY nombre;
+
+-- Ordenar resultados
+SELECT * FROM nombre_tabla
+ORDER BY fecha_creacion DESC;
+
+-- Filtrar agrupaciones (HAVING)
+SELECT nombre, COUNT(*) AS cantidad
+FROM nombre_tabla
+GROUP BY nombre
+HAVING COUNT(*) > 1;
