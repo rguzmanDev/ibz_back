@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "lT8tfjpu5xVbKlclhCeGlyO8dE6meyusfk9+cDRY3D8=",
+  "Source": "ibz_backend",
+  "BasePath": "_content/ibz_backend",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

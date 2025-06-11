@@ -1,0 +1,260 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "ibz_backend",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Miembro/getListarMiembros": {
+      "get": {
+        "tags": [
+          "Miembro"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Miembro/getMiembro/{_idmiembro}": {
+      "get": {
+        "tags": [
+          "Miembro"
+        ],
+        "parameters": [
+          {
+            "name": "_idmiembro",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Miembro/createMiembro": {
+      "post": {
+        "tags": [
+          "Miembro"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Miembros"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Miembros"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Miembros"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Miembro/updateMiembro": {
+      "put": {
+        "tags": [
+          "Miembro"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Miembros"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Miembros"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Miembros"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Miembro/deleteMiembro/{_idmiembro}": {
+      "delete": {
+        "tags": [
+          "Miembro"
+        ],
+        "parameters": [
+          {
+            "name": "_idmiembro",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Varios/genero": {
+      "get": {
+        "tags": [
+          "Varios"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Varios/departamento": {
+      "get": {
+        "tags": [
+          "Varios"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Varios/estado-civil": {
+      "get": {
+        "tags": [
+          "Varios"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Varios/municipios/{_iddepartamento}": {
+      "get": {
+        "tags": [
+          "Varios"
+        ],
+        "parameters": [
+          {
+            "name": "_iddepartamento",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Miembros": {
+        "type": "object",
+        "properties": {
+          "idmiembro": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "nombres": {
+            "type": "string",
+            "nullable": true
+          },
+          "apellidos": {
+            "type": "string",
+            "nullable": true
+          },
+          "fecha_nacimiento": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "idgenero": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "idestado": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "telefono": {
+            "type": "string",
+            "nullable": true
+          },
+          "correo": {
+            "type": "string",
+            "nullable": true
+          },
+          "direccion": {
+            "type": "string",
+            "nullable": true
+          },
+          "fecha_ingreso": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "bautizado": {
+            "type": "boolean"
+          },
+          "fecha_bautizo": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "activo": {
+            "type": "boolean"
+          },
+          "idmunicipio": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "iddepartamento": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

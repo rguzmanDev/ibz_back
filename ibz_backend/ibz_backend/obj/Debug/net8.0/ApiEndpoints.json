@@ -1,0 +1,122 @@
+[
+  {
+    "ContainingType": "ibz_backend.Controllers.MiembroController",
+    "Method": "createMiembro",
+    "RelativePath": "api/Miembro/createMiembro",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "crearMiembro",
+        "Type": "ibz_backend.Models.Miembros",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ibz_backend.Controllers.MiembroController",
+    "Method": "deleteMiembro",
+    "RelativePath": "api/Miembro/deleteMiembro/{_idmiembro}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "_idmiembro",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ibz_backend.Controllers.MiembroController",
+    "Method": "getListarMiembros",
+    "RelativePath": "api/Miembro/getListarMiembros",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ibz_backend.Controllers.MiembroController",
+    "Method": "getMiembro",
+    "RelativePath": "api/Miembro/getMiembro/{_idmiembro}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "_idmiembro",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ibz_backend.Controllers.MiembroController",
+    "Method": "updateMiembro",
+    "RelativePath": "api/Miembro/updateMiembro",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "actualizarMiembro",
+        "Type": "ibz_backend.Models.Miembros",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ibz_backend.Controllers.VariosController",
+    "Method": "getDepartamento",
+    "RelativePath": "api/Varios/departamento",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ibz_backend.Controllers.VariosController",
+    "Method": "getEstadoCivil",
+    "RelativePath": "api/Varios/estado-civil",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ibz_backend.Controllers.VariosController",
+    "Method": "getGenero",
+    "RelativePath": "api/Varios/genero",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ibz_backend.Controllers.VariosController",
+    "Method": "get_municipios",
+    "RelativePath": "api/Varios/municipios/{_iddepartamento}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "_iddepartamento",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

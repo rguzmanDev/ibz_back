@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\ibz_backend.props" />
+</Project>
